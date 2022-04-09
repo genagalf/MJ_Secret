@@ -1,4 +1,4 @@
 /// @description Variables objeto pusheable, velocidad...
 
-spd = 2;
+spd = 4;
 distance = 32;
