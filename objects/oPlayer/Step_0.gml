@@ -13,28 +13,28 @@ if (speed != 0) { //Si nos estamos moviendo
 
 if (speed == 0) { //Si estamos quietos entonces...
 	if (keyboard_check(ord("D"))) { //drcha
-		if (!place_meeting(x+32, y, oBlock)) { //place_free(x+32, y)
+		if (!place_meeting(x+32, y, oBlock) && !place_meeting(x+32, y, oHole)) { //place_free(x+32, y)
 			hspeed = spd;
 			distance = 32;
 			action = "Walk"; //xra que cambien el sprite a movimiento (ver end step)
 		}
 		face = "R";
 	} else if (keyboard_check(ord("A"))) { //izqda
-		if (!place_meeting(x-32, y, oBlock)) { //place_free(x-32, y)
+		if (!place_meeting(x-32, y, oBlock) && !place_meeting(x-32, y, oHole)) { //place_free(x-32, y)
 			hspeed = -spd;
 			distance = 32;
 			action = "Walk";
 		}
 		face = "L";
 	} else if (keyboard_check(ord("S"))) { //abajo
-		if  (!place_meeting(x, y+32, oBlock)) { //place_free(x, y+32)
+		if  (!place_meeting(x, y+32, oBlock) && !place_meeting(x, y+32, oHole)) { //place_free(x, y+32)
 			vspeed = spd;
 			distance = 32;
 			action = "Walk";
 		}
 		face = "D";
 	} else if (keyboard_check(ord("W"))) { //arriba
-		if (!place_meeting(x, y-32, oBlock)) { //place_free(x, y-32)
+		if (!place_meeting(x, y-32, oBlock) && !place_meeting(x, y-32, oHole)) { //place_free(x, y-32)
 			vspeed = -spd;
 			distance = 32;
 			action = "Walk";
