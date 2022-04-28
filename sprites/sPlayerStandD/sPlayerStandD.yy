@@ -94,7 +94,7 @@
   },
   "parent": {
     "name": "Down",
-    "path": "folders/Sprites/Character/Down.yy",
+    "path": "folders/Sprites/Character/Player/Down.yy",
   },
   "resourceVersion": "1.0",
   "name": "sPlayerStandD",

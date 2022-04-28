@@ -102,7 +102,7 @@
   },
   "parent": {
     "name": "Up",
-    "path": "folders/Sprites/Character/Up.yy",
+    "path": "folders/Sprites/Character/Player/Up.yy",
   },
   "resourceVersion": "1.0",
   "name": "sPlayerWalkU",

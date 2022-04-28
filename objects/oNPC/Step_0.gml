@@ -1,0 +1,4 @@
+
+scrUpdateMovement();
+
+scrUpdateSprite();

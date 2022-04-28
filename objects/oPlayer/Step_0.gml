@@ -2,50 +2,23 @@
 
 //Movement
 
-if (speed != 0) { //Si nos estamos moviendo
-	distance -= spd;
-	
-	if (distance <= 0 ) { //para detener al jugador cuando haya movido 32px
-		speed = 0;
-		action = "Stand"; //para cambiar el sprite a quieto
-	}
-}
+scrUpdateMovement();
 
 if (speed == 0) { //Si estamos quietos entonces...
 	if (keyboard_check(ord("D"))) { //drcha
-		if (!place_meeting(x+32, y, oBlock) && !place_meeting(x+32, y, oHole)) { //place_free(x+32, y)
-			hspeed = spd;
-			distance = 32;
-			action = "Walk"; //xra que cambien el sprite a movimiento (ver end step)
-		}
-		face = "R";
+		scrMoveTo(1, 0);
 	} else if (keyboard_check(ord("A"))) { //izqda
-		if (!place_meeting(x-32, y, oBlock) && !place_meeting(x-32, y, oHole)) { //place_free(x-32, y)
-			hspeed = -spd;
-			distance = 32;
-			action = "Walk";
-		}
-		face = "L";
+		scrMoveTo(-1, 0);
 	} else if (keyboard_check(ord("S"))) { //abajo
-		if  (!place_meeting(x, y+32, oBlock) && !place_meeting(x, y+32, oHole)) { //place_free(x, y+32)
-			vspeed = spd;
-			distance = 32;
-			action = "Walk";
-		}
-		face = "D";
+		scrMoveTo(0, 1);
 	} else if (keyboard_check(ord("W"))) { //arriba
-		if (!place_meeting(x, y-32, oBlock) && !place_meeting(x, y-32, oHole)) { //place_free(x, y-32)
-			vspeed = -spd;
-			distance = 32;
-			action = "Walk";
-		}
-		face = "U";
+		scrMoveTo(0, -1);
 	}
 }
 
 //Animation
 
-sprite_index = asset_get_index("sPlayer" + action + face); //obtener un asset de GM usando un nombre, en este caso un sprite
+scrUpdateSprite(); //obtener un asset de GM usando un nombre, en este caso un sprite
 
 //Empujar Objeto
 

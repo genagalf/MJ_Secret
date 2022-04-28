@@ -78,7 +78,7 @@
   "nineSlice": null,
   "parent": {
     "name": "Left",
-    "path": "folders/Sprites/Character/Left.yy",
+    "path": "folders/Sprites/Character/Player/Left.yy",
   },
   "resourceVersion": "1.0",
   "name": "sPlayerWalkL",

@@ -70,7 +70,7 @@
   "nineSlice": null,
   "parent": {
     "name": "Right",
-    "path": "folders/Sprites/Character/Right.yy",
+    "path": "folders/Sprites/Character/Player/Right.yy",
   },
   "resourceVersion": "1.0",
   "name": "sPlayerStandR",
