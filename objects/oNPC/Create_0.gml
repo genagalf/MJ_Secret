@@ -6,4 +6,4 @@ name = "NPC"; //para el script del sprite
 action = "Stand"; //Walk o Stand
 face = "D"; //Hacia donde mira
 
-alarm[0] = room_speed * 3; //A los 3 segundos llama a la alarma 0 para que se ejecute
+alarm[0] = room_speed * 1; //Al 1 segundos llama a la alarma 0 para que se ejecute
