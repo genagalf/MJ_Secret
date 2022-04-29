@@ -37,3 +37,6 @@ if (vspeed < 0) { //Si el bloque se esta moviendo arriba
 	}
 }
 
+
+
+

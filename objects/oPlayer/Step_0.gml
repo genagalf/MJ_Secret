@@ -21,6 +21,8 @@ if (speed == 0) { //Si estamos quietos entonces...
 		scrMoveTo(0, 1);
 	} else if (keyUp) { //arriba
 		scrMoveTo(0, -1);
+	} if (keyPush) { //Si pulsa Espacio empujar objeto (Sin else)
+		scrPushObject();
 	}
 }
 
@@ -28,38 +30,4 @@ if (speed == 0) { //Si estamos quietos entonces...
 
 scrUpdateSprite(); //obtener un asset de GM usando un nombre, en este caso un sprite
 
-//Empujar Objeto
 
-if (speed == 0) { //Si estamos quietos
-	if (keyPush) { //Si pulsa Espacio
-		if (place_meeting(x+32, y, oPushBlock) && face == "R") { //Si tenemos un objeto empujable y lo miramos drcha
-			var push_block = instance_place(x+32, y, oPushBlock); //Guardamos la instancia del objeto
-			with (push_block) { //Sobre el objeto
-				if (!place_meeting(x+32, y, oBlock)) {
-					hspeed = spd;
-				}
-			}
-		} else if (place_meeting(x-32, y, oPushBlock) && face == "L") { //Si tenemos un objeto empujable y lo miramos izqda
-			var push_block = instance_place(x-32, y, oPushBlock); //Guardamos la instancia del objeto
-			with (push_block) { //Sobre el objeto
-				if (!place_meeting(x-32, y, oBlock)) {
-					hspeed = -spd;
-				}
-			}
-		} else if (place_meeting(x, y+32, oPushBlock) && face == "D") { //Si tenemos un objeto empujable y lo miramos abajo
-			var push_block = instance_place(x, y+32, oPushBlock); //Guardamos la instancia del objeto
-			with (push_block) { //Sobre el objeto
-				if  (!place_meeting(x, y+32, oBlock)) {
-					vspeed = spd;
-				}
-			}
-		} else if (place_meeting(x, y-32, oPushBlock) && face == "U") { //Si tenemos un objeto empujable y lo miramos arriba
-			var push_block = instance_place(x, y-32, oPushBlock); //Guardamos la instancia del objeto
-			with (push_block) { //Sobre el objeto
-				if (!place_meeting(x, y-32, oBlock)) {
-					vspeed = -spd;
-				}
-			}
-		}
-	}
-}
