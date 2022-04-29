@@ -8,6 +8,7 @@ keyUp = keyboard_check(ord("W"));
 keyDown = keyboard_check(ord("S"));
 keyPush = keyboard_check(vk_space);
 
+if (!global.gamePaused) {
 //Movement
 
 scrUpdateMovement();
@@ -30,4 +31,5 @@ if (speed == 0) { //Si estamos quietos entonces...
 
 scrUpdateSprite(); //obtener un asset de GM usando un nombre, en este caso un sprite
 
+}
 

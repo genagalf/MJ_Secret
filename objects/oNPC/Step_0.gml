@@ -1,4 +1,5 @@
 
-scrUpdateMovement();
+	scrUpdateMovement();
+	scrUpdateSprite();
 
-scrUpdateSprite();
+
