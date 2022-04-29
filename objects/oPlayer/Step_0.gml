@@ -1,5 +1,7 @@
 /// @description Player Code
 
+//Get player input
+
 keyLeft = keyboard_check(ord("A"));
 keyRight = keyboard_check(ord("D"));
 keyUp = keyboard_check(ord("W"));
