@@ -386,6 +386,10 @@
     "PhysicsWorldGravityY": 10.0,
     "PhysicsWorldPixToMetres": 0.1,
   },
+  "parent": {
+    "name": "MJ_Secret",
+    "path": "MJ_Secret.yyp",
+  },
   "resourceVersion": "1.0",
   "name": "rFirstLevel",
   "tags": [],
