@@ -1,7 +1,7 @@
 /// @description Player Code, variable definition
 //Each tile 32x32px
 
-spd = 32 / 64 * 2; //32px, 64 framerate (ojito le ponemos 64 xra q sea un numero redondo), 2 Tiles per second
+spd = 2; //32px, 64 framerate (ojito le ponemos 64 xra q sea un numero redondo), 2 Tiles per second 32 / 64 * 2
 distance = 0; //Me dirá los pixeles que me voy a mover antes de detenerme
 
 name = "Player"; //para el script del sprite
